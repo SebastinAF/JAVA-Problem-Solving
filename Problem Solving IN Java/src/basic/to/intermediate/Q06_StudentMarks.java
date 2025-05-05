@@ -1,5 +1,7 @@
 package basic.to.intermediate;
 
+import java.util.Scanner;
+
 public class Q06_StudentMarks {
 	
 	/**
@@ -21,4 +23,23 @@ public class Q06_StudentMarks {
 	Total Marks   = 240  
 	Average Marks = 80.0
 	 */
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Enter Mark 1: ");
+		int m1 = scanner.nextInt();
+		System.out.print("Enter Mark 2: ");
+		int m2 = scanner.nextInt();
+		System.out.print("Enter Mark 3: ");
+		int m3 = scanner.nextInt();
+
+		int total = m1 + m2 + m3;
+
+		float average = total / 3.0f;
+
+		System.out.print("Total Marks   = " + total + "\n");
+		System.out.print("Average Marks = " + average);
+	}
 }

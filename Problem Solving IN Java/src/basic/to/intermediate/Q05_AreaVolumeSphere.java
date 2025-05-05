@@ -1,5 +1,24 @@
 package basic.to.intermediate;
 
+import java.util.Scanner;
+
+class AreaVolumeSphere{
+
+	public void AreaAndVolumeOFSphere(){
+
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.print("Enter Radius of Sphere: ");
+		double r = scanner.nextDouble();
+
+		double A = 4 * Math.PI * r * r;
+		double V = (4.0 / 3.0) * Math.PI * r * r * r;
+
+		System.out.printf("Volume of Sphere: %.6f \n", V);
+		System.out.printf("Area of Sphere  : %.6f", A);
+	}
+}
+
 public class Q05_AreaVolumeSphere {
 	
 	/**
@@ -23,4 +42,10 @@ public class Q05_AreaVolumeSphere {
 	
 	 */
 
+	public static void main(String[] args) {
+
+		AreaVolumeSphere AVS = new AreaVolumeSphere();
+		AVS.AreaAndVolumeOFSphere();
+
+	}
 }

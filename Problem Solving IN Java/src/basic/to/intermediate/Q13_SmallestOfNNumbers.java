@@ -33,18 +33,25 @@ public class Q13_SmallestOfNNumbers {
 	public static void main(String args[]) {
 
 		Scanner scanner = new Scanner(System.in);
+
+		//getting input for user to define of size array
 		System.out.print("Enter how many numbers you want to input : ");
 		int n = scanner.nextInt();
 
+		//creating an integer array with size of n
 		int[] number = new int[n];
 
+		//using for loop getting the numbers from user and store  in array
 		for (int i = 0; i < number.length; i++){
 			System.out.print("Enter number " + (i+1) + ": ");
 			number[i] = scanner.nextInt();
 		}
 
+		//by default initializing an integer variable with array value of number[0]
 		int SmallValue = number[0] ;
 
+		//using for loop comparing the smallValue with remaining values in array if the comparing value array number[i]
+		// is smaller than smallValue then it will be set as smallValues, and it loops until last element in array
 		for (int i = 1; i < number.length; i++){
 			if(number[i] < SmallValue ){
 				SmallValue = number[i];

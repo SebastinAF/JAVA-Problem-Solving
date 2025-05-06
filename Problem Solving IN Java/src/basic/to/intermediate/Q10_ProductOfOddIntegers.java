@@ -19,4 +19,20 @@ public class Q10_ProductOfOddIntegers {
 
 	 */
 
+	public static void main(String ags[]){
+
+		//declaring and initialization variable to store the Product value
+		int Product = 1;
+
+		//using for loop calculating the product = Product * i range of 1 to 15
+		for (int i = 1; i <= 15; i++){
+			if(i % 2 != 0) {
+				Product *= i;
+			}
+		}
+
+		//printing the Product value
+		System.out.println("Product of odd numbers from 1 to 15 = " + Product);
+
+	}
 }

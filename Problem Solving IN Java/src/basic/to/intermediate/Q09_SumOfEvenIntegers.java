@@ -17,4 +17,17 @@ public class Q09_SumOfEvenIntegers {
 	(Even numbers: 2 + 4 + 6 + ... + 30 = 240)
 	 */
 
+	public static void main(String ags[]){
+
+		int sum = 0;
+
+		for (int i = 2; i <= 30; i++){
+			if(i % 2 == 0) {
+				sum += i;
+			}
+		}
+
+		System.out.println("Sum of even numbers from 2 to 30 = " + sum);
+
+	}
 }

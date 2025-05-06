@@ -1,5 +1,7 @@
 package basic.to.intermediate;
 
+import java.util.Scanner;
+
 public class Q13_SmallestOfNNumbers {
 	
 	/**
@@ -28,4 +30,26 @@ public class Q13_SmallestOfNNumbers {
 
 	 */
 
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter how many numbers you want to input : ");
+		int n = scanner.nextInt();
+
+		int[] number = new int[n];
+
+		for (int i = 0; i < number.length; i++){
+			System.out.print("Enter number " + (i+1) + ": ");
+			number[i] = scanner.nextInt();
+		}
+
+		int SmallValue = number[0] ;
+
+		for (int i = 1; i < number.length; i++){
+			if(number[i] < SmallValue ){
+				SmallValue = number[i];
+			}
+		}
+		System.out.println("The smallest number is: " + SmallValue);
+	}
 }

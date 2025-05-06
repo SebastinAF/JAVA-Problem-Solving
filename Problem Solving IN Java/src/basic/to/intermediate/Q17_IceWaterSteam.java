@@ -1,5 +1,7 @@
 package basic.to.intermediate;
 
+import java.util.Scanner;
+
 public class Q17_IceWaterSteam {
 	
 	/**
@@ -18,8 +20,25 @@ public class Q17_IceWaterSteam {
 		Input:
 		Enter the water temperature: 120
 		Output:
-		Water status is STEAM for the Temperature 120.00
+		Water status is STEAM Water status is 120.00
 
 	 */
 
+	public static void main(String ags[]) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		//getting Color code value from user using int Data type
+		System.out.print("Enter the water temperature: ");
+		int temp = scanner.nextInt();
+
+		//using if-else conditions we are checking the temperatures and printing the state of water
+		if (temp <= 0){
+			System.out.println("Water status is ICE Water status is " + temp);
+		}else if (temp > 0 && temp < 100 ){
+			System.out.println("Water status is WATER Water status is " + temp);
+		} else if (temp >= 100) {
+			System.out.println("Water status is STEAM Water status is " + temp);
+		}
+	}
 }

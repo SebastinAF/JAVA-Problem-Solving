@@ -19,8 +19,10 @@ public class Q09_SumOfEvenIntegers {
 
 	public static void main(String ags[]){
 
+		//initializing int variable sum as 0
 		int sum = 0;
 
+		//using for loop we are adding the values of even range from 2 to 30
 		for (int i = 2; i <= 30; i++){
 			if(i % 2 == 0) {
 				sum += i;

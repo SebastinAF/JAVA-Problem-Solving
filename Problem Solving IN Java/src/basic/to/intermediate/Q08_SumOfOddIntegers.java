@@ -4,9 +4,11 @@ import java.util.Scanner;
 
 class SumOfOddIntegers{
 
+	//method for calculate the values by passing argument n
 	public int SumOfOdd(int n){
 		int sum = 0, count = 0;
 
+		//using for loop we are looping to sum the odd values with range n
 		for (int i = 1; count < n; i++){
 			if(i % 2 != 0) {
 				sum += i;
@@ -44,9 +46,11 @@ public class Q08_SumOfOddIntegers {
 
 		Scanner scanner = new Scanner(System.in);
 
+		//getting input from user for number of odd values to be sum
 		System.out.print("Enter how many odd numbers to sum: ");
 		int n = scanner.nextInt();
 
+		//creating object for the class using the object we are calling the function and printing the value of sumOfOdd
 		SumOfOddIntegers SOI = new SumOfOddIntegers();
 		System.out.println("Sum of first 5 odd numbers is " + SOI.SumOfOdd(n));
 

@@ -1,5 +1,7 @@
 package basic.to.intermediate;
 
+import java.util.Scanner;
+
 public class Q12_Histogram {
 	
 	/**
@@ -24,7 +26,32 @@ public class Q12_Histogram {
  	2 **
  	6 ******
  	1 *
- 	
 	 */
+
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		//creating array integer number size of 5
+		int[] number = new int[5];
+
+		//getting input from users 5 Numbers in a same line using for loop to store the number of values in same array
+		System.out.println("Enter 5 Numbers in a same line: ");
+		for (int i = 0; i < number.length; i++){
+			number[i] = scanner.nextInt();
+		}
+
+		//getting value from stored array and printing using the for loop
+		//1st for loop is for getting the value and second is for print number of stars by the value we fetch
+		//from loop one.
+		for (int j = 0; j < number.length; j++){
+			System.out.print(number[j] + " ");
+			for (int k = 0; k < number[j]; k++){
+				System.out.print("*");
+			}
+			System.out.println("");
+		}
+
+	}
 
 }

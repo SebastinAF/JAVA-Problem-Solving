@@ -1,5 +1,7 @@
 package basic.to.intermediate;
 
+import java.util.Scanner;
+
 public class Q14_TextAnalysis {
 	
 	/**
@@ -26,4 +28,37 @@ public class Q14_TextAnalysis {
 
 	 */
 
+	public static void main(String args[]) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		//initializing variable for store the count of letters, digits, space_chars, others
+		int Letters = 0, Digits = 0, Space_Chars = 0, others = 0;
+
+		//getting string from user
+		System.out.println("Enter the text below: ");
+		String text = scanner.nextLine();
+
+		//using for loop iterating the whole String char by char and using if condition we are checking isLetter, isDigit,
+		// IsWhitespace and others with incrementing values.
+		for (int i = 0; i < text.length(); i++){
+			char ch = text.charAt(i);
+			if (Character.isLetter(ch)){
+				Letters++;
+			}
+			if (Character.isDigit(ch)){
+				Digits++;
+			}
+			if(Character.isWhitespace(ch)){
+				Space_Chars++;
+			}
+			if (!Character.isLetter(ch) && !Character.isDigit(ch) && !Character.isWhitespace(ch)){
+				others++;
+			}
+		}
+		System.out.println("Letters : " + Letters);
+		System.out.println("Digits : " + Digits);
+		System.out.println("Space Chars : " + Space_Chars);
+		System.out.println("Others : " + others);
+	}
 }

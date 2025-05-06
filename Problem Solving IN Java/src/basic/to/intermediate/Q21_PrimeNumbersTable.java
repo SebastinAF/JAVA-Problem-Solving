@@ -1,5 +1,7 @@
 package basic.to.intermediate;
 
+import java.util.Scanner;
+
 public class Q21_PrimeNumbersTable {
 	
 	/**
@@ -21,4 +23,38 @@ public class Q21_PrimeNumbersTable {
 
 	 */
 
+	public static void main(String ags[]) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		//getting number prime value range
+		System.out.print("How many Prime numbers? : ");
+		int primeValue = scanner.nextInt();
+
+		//initializing count for count number of prime values reached and number is to store prime numbers
+		int count = 0;
+		int number = 2;
+
+		//using while loop we are printing the prime numbers until it reaches the count specified
+		//calling isprime function with passing arguments and incrementing the count, number values.
+		while (count < primeValue) {
+			if (isPrime(number)) {
+				System.out.print(number + " ");
+				count++;
+			}
+			number++;
+		}
+		scanner.close();
+	}
+
+	//boolean function to verify the value is prime or not
+	public static boolean isPrime(int n) {
+		if (n <= 1) return false;
+
+		for (int i = 2; i * i <= n; i++) {
+			if (n % i == 0)
+				return false;
+		}
+		return true;
+	}
 }

@@ -1,5 +1,7 @@
 package basic.to.intermediate;
 
+import java.util.Scanner;
+
 public class Q18_StringReverse {
 	
 	/**
@@ -23,4 +25,16 @@ public class Q18_StringReverse {
 
 	 */
 
+	public static void main(String ags[]) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		//getting the String from user using String Data type
+		System.out.println("Enter the string below : ");
+		String string = scanner.nextLine();
+
+		// taking the string variable, reverses its characters using StringBuilder, and print .
+		System.out.println("Reversed Text: " + new StringBuilder(string).reverse());
+
+	}
 }

@@ -1,5 +1,26 @@
 package basic.to.intermediate;
 
+import java.util.Scanner;
+
+class FactorialTable{
+
+	public void Factorial(int n){
+
+		//declaring variable for initializing the Starting value of Factorial
+		int SFact = 1;
+
+		System.out.println("N  |   Factorial");
+		System.out.println("----------------");
+
+		//using for loop calculating the SFact = SFact + i and print the i value as number of iterative value and each SFact values
+		for (int i = 1; i <= n; i++){
+			SFact *= i;
+			System.out.printf("%1d  |  %10d\n", i, SFact);
+		}
+
+	}
+}
+
 public class Q11_FactorialTable {
 	
 	/**
@@ -26,4 +47,17 @@ public class Q11_FactorialTable {
   	4  |           24
   	5  |          120
 	 */
+
+	public static void main(String args[]){
+
+		//get user input for N value of factorial
+		Scanner scanner = new Scanner(System.in);
+
+		System.out.println("Enter the N value: ");
+		int n = scanner.nextInt();
+
+		//creating object for class FactorialTable and using the object calling the Factorial method
+		FactorialTable FT = new FactorialTable();
+		FT.Factorial(n);
+	}
 }

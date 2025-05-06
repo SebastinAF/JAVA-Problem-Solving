@@ -28,7 +28,7 @@ public class Q17_IceWaterSteam {
 
 		Scanner scanner = new Scanner(System.in);
 
-		//getting Color code value from user using int Data type
+		//getting temperature value from user using int Data type
 		System.out.print("Enter the water temperature: ");
 		int temp = scanner.nextInt();
 

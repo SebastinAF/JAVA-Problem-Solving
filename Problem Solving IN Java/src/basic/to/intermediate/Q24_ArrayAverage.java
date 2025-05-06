@@ -1,5 +1,7 @@
 package basic.to.intermediate;
 
+import java.util.Scanner;
+
 public class Q24_ArrayAverage {
 	
 	/**
@@ -31,4 +33,26 @@ Average of the numbers: 30.00
 
 	 */
 
+	public static void main(String ags[]) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		//getting the size of the array from user
+		System.out.print("Enter how many numbers: ");
+		int n = scanner.nextInt();
+
+		//creating array to store the n values and initialization of sum
+		int[] numbers = new int[n];
+		int sum = 0;
+
+		//using for loop getting input from user and calculate the sum those values to find average
+		for (int i = 0; i < numbers.length; i++){
+			numbers[i] = scanner.nextInt();
+			sum += numbers[i];
+		}
+
+		//calculating avg using float type and print
+		float avg = sum / n;
+		System.out.printf("Average of the numbers: %.2f", avg);
+	}
 }

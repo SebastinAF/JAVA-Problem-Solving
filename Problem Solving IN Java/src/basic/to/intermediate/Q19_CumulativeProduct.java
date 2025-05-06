@@ -1,5 +1,7 @@
 package basic.to.intermediate;
 
+import java.util.Scanner;
+
 public class Q19_CumulativeProduct {
 	
 	/**
@@ -21,4 +23,26 @@ public class Q19_CumulativeProduct {
 
 
 	 */
+
+	public static void main(String ags[]) {
+
+		Scanner scanner = new Scanner(System.in);
+
+		//getting the value from user using double Data type for how many double values we need to enter
+		System.out.println("Enter the Number of count : ");
+		double value = scanner.nextDouble();
+
+		System.out.println("Enter the Values : ");
+		//initializing the product variable as double type
+		double product = 1.0;
+
+		//using for loop product the number of inputs using the product variable
+		for (int i = 1; i <= value; i++){
+			double num = scanner.nextDouble();
+			product *= num;
+		}
+		System.out.println("Cumulative Total = " + product);
+
+		scanner.close();
+	}
 }

@@ -2,8 +2,10 @@ package basic.to.intermediate;
 
 import java.util.Scanner;
 
+//class contains a function to calculate the Interest value by passing arguments float P, float N, float R.
 class FindSimpleInterest{
 
+	//calculating Interest using SI = (P × N × R) / 100
 	public float calculateInterest(float P, float N, float R){
 		float SI = (P * N * R ) / 100;
 		return SI;
@@ -42,6 +44,7 @@ public class Q02_SimpleInterest {
 
 		Scanner scanner = new Scanner(System.in);
 
+		//getting inputs from users for Principal Amount, Rate of Interest and No. of Years
 		System.out.print("Enter Principal Amount: ");
 		int p = scanner.nextInt();
 
@@ -51,6 +54,7 @@ public class Q02_SimpleInterest {
 		System.out.print("Enter No. of Years: ");
 		int n = scanner.nextInt();
 
+		//creating object to the class to FindSimpleInterest and calling the function using object
 		FindSimpleInterest SI = new FindSimpleInterest();
 		System.out.printf("Simple Interest = %.2f", SI.calculateInterest(p, r, n));
 

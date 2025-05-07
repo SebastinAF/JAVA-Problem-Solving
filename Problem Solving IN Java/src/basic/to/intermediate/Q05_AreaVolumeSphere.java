@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 class AreaVolumeSphere{
 
+	//method to calculate area (A) = 4 × π × r² and volume (V) = (4/3) × π × r³ by getting the radius from user
 	public void AreaAndVolumeOFSphere(){
 
 		Scanner scanner = new Scanner(System.in);
@@ -44,6 +45,7 @@ public class Q05_AreaVolumeSphere {
 
 	public static void main(String[] args) {
 
+		//creating object for AreaVolumeSphere and calling the method AreaAndVolumeOFSphere to get the area and volume
 		AreaVolumeSphere AVS = new AreaVolumeSphere();
 		AVS.AreaAndVolumeOFSphere();
 

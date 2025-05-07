@@ -28,6 +28,7 @@ public class Q06_StudentMarks {
 
 		Scanner scanner = new Scanner(System.in);
 
+		//getting 3 marks from user for sum and find Average
 		System.out.print("Enter Mark 1: ");
 		int m1 = scanner.nextInt();
 		System.out.print("Enter Mark 2: ");
@@ -35,8 +36,10 @@ public class Q06_StudentMarks {
 		System.out.print("Enter Mark 3: ");
 		int m3 = scanner.nextInt();
 
+		//sum the marks for total
 		int total = m1 + m2 + m3;
 
+		//using float type finding the Average = total / 3.0f
 		float average = total / 3.0f;
 
 		System.out.print("Total Marks   = " + total + "\n");

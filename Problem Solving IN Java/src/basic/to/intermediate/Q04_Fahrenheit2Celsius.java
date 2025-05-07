@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 class Fahrenheit2Celsius{
 
+	//function to calculate ConvertToCelsius using C = (5 / 9.0) × (F - 32)
 	public float ConvertToCelsius(float F){
 
 		float C = (5 / 9.0f) * (F - 32);
@@ -34,9 +35,11 @@ public class Q04_Fahrenheit2Celsius {
 
 		Scanner scanner = new Scanner(System.in);
 
+		//getting input from user for Fahrenheit using float type
 		System.out.println("Enter Fahrenheit: ");
 		float f = scanner.nextFloat();
 
+		//creating object for Fahrenheit2Celsius and using object we are calling the function
 		Fahrenheit2Celsius FTC = new Fahrenheit2Celsius();
 		System.out.printf("For %.6f deg F is %.6f deg C", f, FTC.ConvertToCelsius(f));
 	}

@@ -2,8 +2,11 @@ package basic.to.intermediate;
 
 import java.util.Scanner;
 
+//class defines the CalculateArea method for find the area of circle by passing r as argument
 class AreaOfCircle{
 	public float CalculateArea(float r){
+
+		//using the formula π * r² finding the area
 		float area = (22.0f / 7.0f) * r * r ;
 		return area;
 	}
@@ -33,9 +36,11 @@ public class Q01_AreaOfCircle {
 
 		Scanner scanner = new Scanner(System.in);
 
+		//getting radius as input from user using float data type
 		System.out.println("Enter Radius of Circle: ");
 		float r = scanner.nextFloat();
 
+		//creating object for AreaOFCircle class using the object we are calling and printing value of area of circle
 		AreaOfCircle AF = new AreaOfCircle();
 		System.out.printf("Area of Circle with Radius %.4f is %.4f" ,r, AF.CalculateArea(r));
 	}

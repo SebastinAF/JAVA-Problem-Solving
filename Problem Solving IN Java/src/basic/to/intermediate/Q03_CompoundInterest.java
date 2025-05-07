@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 class FindInterest{
 
+	//class contains a function to calculate the Interest value by passing arguments int P, float N, int R.
 	public float calculateInterest(int P, float R, int N){
 		float i = R / 100;
 		float F = (float) (P * Math.pow( 1 + i, N));
@@ -39,6 +40,8 @@ public class Q03_CompoundInterest {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 
+		//getting inputs from users for Principal Amount, Rate of Interest and No. of Years
+
 		System.out.print("Enter Principal Value: ");
 		int p = scanner.nextInt();
 
@@ -48,6 +51,7 @@ public class Q03_CompoundInterest {
 		System.out.print("Enter No. of Years: ");
 		int n = scanner.nextInt();
 
+		//creating object to the class to FindInterest and calling the function using object
 		FindInterest FI = new FindInterest();
 		System.out.printf("Compound Interest %.2f", FI.calculateInterest(p, r, n));
 	}

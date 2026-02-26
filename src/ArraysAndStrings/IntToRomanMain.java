@@ -1,4 +1,4 @@
-package ArrasAndStrings;
+package ArraysAndStrings;
 
 class Solution23 {
     public String intToRoman(int num) {

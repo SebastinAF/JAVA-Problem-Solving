@@ -1,4 +1,4 @@
-package ArrasAndStrings;
+package ArraysAndStrings;
 
 class Solution27 {
     public String convert(String s, int numRows) {

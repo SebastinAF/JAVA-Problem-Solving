@@ -6,6 +6,14 @@ class Solution14 {
     public int[] constructTransformedArray(int[] nums) {
         int[] result = new int[nums.length];
 
+        for (int i =0; i < nums.length; i++) {
+            if (nums[i] == 0) {
+                result[i] = nums[i];
+            } else {
+                int value = ((i + nums[i]) % nums.length + nums.length) % nums.length;
+                result[i] = nums[value];
+            }
+        }
         return result;
     }
 }

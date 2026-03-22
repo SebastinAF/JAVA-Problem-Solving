@@ -26,7 +26,6 @@ class Solution22 {
             } else {
                 map.put(sum, i);
             }
-
         }
 
         return maxLength;

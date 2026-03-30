@@ -3,7 +3,6 @@ package ArraysAndStrings;
 class Solution12 {
     public boolean canBeEqual(String s1, String s2) {
         int[] chars = new int[26];
-
         for (int i = 0; i < s1.length(); i++) {
             if (i % 2 == 0) {
                 chars[s1.charAt(i) - 'a']++;
@@ -11,7 +10,6 @@ class Solution12 {
         }
 
         int[] chars2 = new int[26];
-
         for (int i = 0; i < s1.length(); i++) {
             if (i % 2 != 0) {
                 chars2[s1.charAt(i) - 'a']++;

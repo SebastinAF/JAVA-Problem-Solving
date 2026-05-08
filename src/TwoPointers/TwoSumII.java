@@ -5,14 +5,20 @@ import java.util.Arrays;
 class Solution01 {
     public int[] twoSum(int[] numbers, int target) {
 
-        for (int i = 0; i < numbers.length; i++) {
-            for (int j = i + 1; j < numbers.length; j++){
-                if (numbers[i] + numbers[j] == target){
-                    return new int[]{i + 1, j + 1};
-                }
+        int[] arr = new int[2];
+        int left = 0, right = numbers.length - 1;
+        for(int i = 0; i < numbers.length; i++) {
+            if (numbers[left] + numbers[right] == target) {
+                arr[0] = left;
+                arr[1] = right;
+                break;
             }
+
+            if (numbers[left] + numbers[right] < target) left++;
+            else right--;
         }
-        return null;
+
+        return arr;
     }
 }
 

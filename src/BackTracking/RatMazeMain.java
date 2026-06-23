@@ -38,6 +38,9 @@ public class RatMazeMain {
     public static void main(String[] args) {
         Solution01 S01 = new Solution01();
 
-        System.out.println(S01.ratInMaze(new int[][]{{1, 0, 0, 0, 5}, {1, 1, 0, 1, 5}, {1, 1, 0, 0, 5}, {0, 1, 1, 1, 5}}));
+        System.out.println(S01.ratInMaze(new int[][]{{1, 0, 0, 0},
+                                                     {1, 1, 0, 1},
+                                                     {1, 1, 0, 0},
+                                                     {0, 1, 1, 1}}));
     }
 }

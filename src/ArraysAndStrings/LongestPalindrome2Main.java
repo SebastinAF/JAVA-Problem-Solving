@@ -5,7 +5,6 @@ import java.util.HashMap;
 class Solution25 {
     public int longestPalindrome(String s) {
         HashMap<Character, Integer> map = new HashMap<>();
-
         for (char ch : s.toCharArray()) map.put(ch, map.getOrDefault(ch, 0 ) + 1);
 
         int totalLen = 0;

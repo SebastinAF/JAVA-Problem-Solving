@@ -11,11 +11,11 @@ class Solution43 {
         for (int v : aliceSizes) sumOfArr1 += v;
         for (int v : bobSizes) sumOfArr2 += v;
 
-        for (int i = 0; i < aliceSizes.length; i++) {
-            for (int j = 0; j < bobSizes.length; j++) {
-                int temp1 = sumOfArr1 - aliceSizes[i];
-                int temp2 = sumOfArr2 - bobSizes[j];
-                if (temp1 + bobSizes[j] == temp2 + aliceSizes[i]) return new int[]{aliceSizes[i], bobSizes[j]};
+        for (int aliceSize : aliceSizes) {
+            for (int bobSize : bobSizes) {
+                int temp1 = sumOfArr1 - aliceSize;
+                int temp2 = sumOfArr2 - bobSize;
+                if (temp1 + bobSize == temp2 + aliceSize) return new int[]{aliceSize, bobSize};
             }
         }
 

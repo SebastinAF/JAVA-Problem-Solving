@@ -5,20 +5,21 @@ import java.util.Arrays;
 class Solution57 {
     public int findGCD(int[] nums) {
 
-        Arrays.sort(nums);
+        int min = nums[0];
+        int max = nums[0];
 
-        int v1 = nums[nums.length - 1];
-        int v2 = nums[0];
-        while (v2 > 0) {
-
-            if (v1 % v2 == 0) return v2;
-
-            int diff = v1 % v2;
-            v1 = v2;
-            v2 = diff;
+        for (int i : nums) {
+            min = Math.min(min, i);
+            max = Math.max(max, i);
         }
 
-        return 1;
+        while (max % min != 0) {
+            int temp = max % min;
+            max = min;
+            min = temp;
+        }
+
+        return min;
     }
 }
 
